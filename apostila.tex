@@ -1,0 +1,124 @@
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+
+\newcommand{\Rn}{\mathbb{R}^n}
+\newcommand{\ball}[2]{B$({#1},{#2})$}
+
+
+\begin{document}
+    
+{\Large mini introdução a topologia geral aplicado ao $\Rn$}\\*
+
+Dado um conjunto $A\subseteq\Rn$, $\vec{a}\in A$, dizemos que $\vec{a}$ é {\it ponto interior} de $A$ se existe $r>0$ tal que $B(\vec{a},r)\subseteq A$.\\
+O conjunto de todos os pontos interiores de $A$ é chamado de interior de $A$, e detonado por $int(A)$. Por definição, $int(A)\subseteq A$.\\
+
+{\bf Definição:} Dizemos que um conjunto $A \subseteq \Rn$ é um conjunto aberto de $\Rn$ se $int(A)=A$\\
+\{ $A$ é um aberto de $\Rn$ $\Leftrightarrow \forall \vec{a}\in A\;\exists\,r>0$ tal que B$(\vec{a},r)\subseteq A$ \}\\*
+
+
+{\bf Teorema:} Toda bola aberta de $\Rn$ é aberto de $\Rn$.\\
+Dem: (mais tarde)\\*
+
+Exemplos:\\
+(mais tarde)\\
+
+Propriedades fundamentais de conjuntos abertos de $\Rn$:
+\begin{description}
+	\item[A1)] $\emptyset$ e $\Rn$ são abertos de $\Rn$.
+	\item[A2)] A união de qualquer quantidade (finita ou infinita) de subconjuntos abertos de $\Rn$ é um aberto de $\Rn$.\\
+Demonstração: (mais tarde)
+	\item[A3)]A intersecção de qualquer quantidade {\it finita} de subconjuntos abertos de $\Rn$ é um aberto de $\Rn$.
+\end{description}
+
+{\bf Definição:} Dizemos que um conjunto $F \subseteq \Rn$ é um conjunto fechado de $\Rn$ se o seu complementar $\Rn \backslash F$ é um aberto de $\Rn$\\*
+
+Propriedades fundamentais de conjuntos fechados de $\Rn$:
+\begin{description}
+	\item[F1)] $\emptyset$ e $\Rn$ são fechados de $\Rn$.
+	\item[F2)] A interseção de qualquer quantidade (finita ou infinita) de subconjuntos 	fechados de $\Rn$ é um fechado de $\Rn$.
+	\item[F3)]A união de qualquer quantidade {\it finita} de subconjuntos fechados de $\Rn$ é um fechado de $\Rn$.
+\end{description}
+
+
+{\bf Teorema:} Seja $A \subseteq \Rn$. $A$ é fechado em $\Rn$ se e só se $A$ contém todos os seus pontos de acumulação.\\
+Demonstração: (mais tarde).\\
+
+{\bf Definição:} Dado $A \subseteq \Rn$ e $\vec{x} \in \Rn$, dizemos que $\vec{x}$ é um {\it ponto de fronteira} de $A$ se toda bola aberta com centro em $\vec{x}$ contém pelo menos um ponto de $A$ e um ponto de $\Rn \backslash A$. Isto é:\\
+$\vec{x}$ é um ponto de fronteira de $A \Leftrightarrow \forall r>0$ \ball{\vec{x}}{r}$\cap A\neq \emptyset$ e \ball{\vec{x}}{r}$\cap\Rn\backslash A\neq\emptyset$.\\
+O conjunto de todos os pontos de fronteira de $A$ é denotado por $\partial A$.
+Note que $\partial A$ não precisa estar contido em $A$.\\*
+
+Exemplos (later);\\*
+
+OBS: Dado $A \subseteq \Rn$, se $\vec{a} \in A$ então: ou $\vec{a} \in int(A)$ ou $\vec{a} \in \partial A$ (ou exclusivo).\\
+
+{\bf Teorema:} Se $A \subseteq \Rn$ e $\vec{x} \in \Rn$, então apenas uma das sequintes é valida para $\vec{x}$:
+\begin{enumerate}
+  \item $\vec{x} \in int(A)$
+  \item $\vec{x} \in \partial A$
+  \item $\vec{x} \in int(\Rn\backslash A)$
+\end{enumerate}
+{\small(note: $\partial A = \partial(\Rn\backslash A$) ) }\\*
+
+Cuidado: Dado $A \subseteq \Rn$, não é necessáriamente verdade que $\partial A = \partial\,int(A)$. Por exemplo, seja A = $\mathbb{Q} \subset \mathbb{R}$. $ \partial A = \mathbb{R}$, mas $\partial\, int(A) = \partial\emptyset = \emptyset$.\\*
+
+{\bf Definição:} Seja $A \subseteq \Rn$. Dados $\vec{a} \in A$ e $r>0$, define-se a bola aberta de centro $\vec{a}$ e raio $r$ {\it relativa a} $A$ como o conjunto:
+\begin{equation*}
+\text{B}_{A}(\vec{a},r)=\{\vec{x} \in A \;|\; \text{d}(\vec{x},\vec{a})<r\}=\text{B}(\vec{a},r)\cap A
+\end{equation*}
+
+Exemplo (mais tarde)\\*
+
+{\bf Definição:} Seja $A \subseteq \Rn$. Dado $B \subseteq A$, dizemos que o ponto $\vec{a}$ é {\it ponto interior de $B$ relativo a $A$} se existir $r>0$ tal que B$_{A}(\vec{a},r) \subseteq B$.
+O conjunto destes pontos é chamado interior de $B$ relativo a $A$ e denotado $int_{A}(B)$.\\
+(isto é, se todo ponto de $B$ for ponto interior de $B$ relativo a $A$)\\
+(mais exemplos depois)\\*
+
+{\bf Definição:} Dados $A \subseteq \Rn$ e $B \subseteq A$, dizemos que $B$ é um aberto de $A$ ou um aberto relativo a $A$ se $B =  int_{A}(B)$ (isto é, se todo ponto de $B$ for ponto interior de $B$ relativo a $A$)
+Exemplos:\dots \\*
+
+{\bf Teorema:} Seja $A \subseteq \Rn$ e $B \subseteq A$. Então $B$ é aberto de $A$ se e somente se existir $V\subseteq \Rn$, $V$ aberto de $\Rn$, tal que $B = V \cap A$.\\
+Demonstração: \dots \\*
+
+{\bf Definição:} Dados $A \subseteq \Rn$ e $B \subseteq A$, dizemos que $B$ é um fechado de $A$ ou relativo a $A$ se o complementar de $B$ em $A$, $A \backslash B$, for um aberto de $A$.\\
+OBS: As propriedades de abertos e fechados relativos análogas as propriedades {\bf A1\ldots3 F1\ldots3} são válidas.\\*
+
+Dados conjuntos $A \subseteq \Rn$ e $B \subseteq \mathbb{R}^m$, queremos trabalhar com a continuidade da função $f:A \to B$, que é continua se e so se:
+\begin{equation*}
+f\big(\underbrace{\hbox{$ \text{B}(\vec{a},\delta)\cap A$}}_{\hbox{\text{B}$_{A}(\vec{a},\delta)$}}\big) \subseteq \underbrace{\hbox{$\text{B}\big(f(\vec{a}),\epsilon \big)\cap B$}}_{\hbox{\text{B}$_{B}\big(f(\vec{a}),\epsilon\big)$}}\\
+\end{equation*}
+
+$\forall \epsilon >0\; \exists\,\delta>0$ tal que $f\big(\text{B}_{A}(\vec{a},\delta)\big) \subseteq \text{B}_{B}\big(f(\vec{a}),\epsilon\big)$\\
+
+{\bf Teorema:} Sejam $A \subseteq \Rn$, $B \subseteq \mathbb{R}^m$ e $f:A \to B$. Então $f$ é continua se e só se para todo $V \subseteq B$ aberto relativo de $B$ tem-se que $f^{-1}(V)$ é aberto relativo de $A$.\\
+($f:A \to B$ é continua $\Leftrightarrow$ a imagem inversa de todo aberto é aberto!)\\
+Demonstração: (later on)\\
+
+{\Large Sequências em $\Rn$}\\*
+
+Uma sequência em $\Rn$ é uma função $f:\mathbb{N} \to \Rn$. Para cada $k \in \mathbb{N}$, denote $f(k)$ por 
+$\vec{x}_{k}$, e denotaremos a sequência por $(\vec{x}_{k})_{k\in\mathbb{N}}$.\\
+
+{\bf Definição:} A sequência $(\vec{x}_{k})_{k}$ em $\Rn$ converge para algum $\vec{a}\in\Rn$ se
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
